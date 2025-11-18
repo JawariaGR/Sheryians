@@ -90,17 +90,64 @@ while (num !== 0) {
 }
 
 /*Print numbers between two user inputs
-Input start and end using prompt() → print all between. 
+Input start and end using prompt() → print all between. */
+
+let start = Number(prompt("Enter Start Number:- "));
+let end = Number(prompt("Enter End Number:- "));
+
+if (start > end) {
+  console.error("Start Number should be less than End Number:");
+} else {
+  for (let i = start; i < end; i++) {
+    console.log(i);
+  }
+}
+
+/*Print only first 3 odd numbers from 1 to 20
+Use loop. Stop with break after 3 odd prints.*/
+
+numbercount = 0;
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 == 1) {
+    console.log(i);
+    numbercount++;
+    if (numbercount === 3) {
+      break;
+    }
+  }
+}
+
+/* user 5 numbers. Count how many are positive
+Use loop + condition + counter.*/
 
 
-Print only first 3 odd numbers from 1 to 20
-Use loop. Stop with break after 3 odd prints.
+positiveCounter = 0;
+for (let i = 1; i <= 5; i++) {
+  userInput = Number(prompt(`Enter Your Number ${i}:-`));
+  if (userInput >= 0) {
+    positiveCounter++;
+  }
+}
+console.log(`${positiveCounter} Number is Positive:`);
 
-Ask user 5 numbers. Count how many are positive
-Use loop + condition + counter.
-
-ATM Simulator – Allow 3 withdrawals
+/*ATM Simulator – Allow 3 withdrawals
 Start with ₹1000 balance. Ask withdrawal amount 3 times.
 If enough balance → deduct
 Else → print “Insufficient balance”
 */
+
+let Balance = 1000
+let WithDrawals = 0
+
+while (WithDrawals !== 3){
+    let amount = Number(prompt("Enter Your Amount You Want to Withdraw : "))
+    if(amount >= Balance) {
+        console.log("Insufficient balance")
+        break
+    } else {
+        Balance = Balance - amount
+        console.log(`Your Current balance is ${Balance}`)
+    }
+    WithDrawals ++ 
+}
+console.log(`Limit Reached`)
