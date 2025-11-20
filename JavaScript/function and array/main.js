@@ -149,6 +149,43 @@ console.log(even)
 
 
 /*7. Create an array of names and use `some()` and `every()` to test a condition(e.g all name longer then 3 char) */
+
+let names = ["Pond", "Mark", "Sky", "Zain", "Ebad"];
+let somelenght = names.some((n) => n.length > 3);
+console.log(somelenght);
+let everylenght = names.every((n) => n.length > 3);
+console.log(everylenght);
+
 /*8. Create an object `user `and test the behavior of Object.freeze() and Object.seal() by adding/changing keys */
+
+let user = {
+  names: "Sky",
+  password: "1234",
+};
+// seal() = can change values but cannot add/remove properties
+
+Object.seal(user);
+user.password = "4321";
+user.email = "Sky@gamil.com"
+console.log(user);
+
+let user1 = {
+  names: "mark",
+  password: "5678",
+};
+
+// Object.freeze() makes an object completely immutable. Cannot change anything
+
+Object.freeze(user1);
+user1.names = "abc";
+user1.email = "mark@gamil.com"
+console.log(user1);
+
 /*9. Create a anested object `(user -> address -> city)` and access the city name inside it */
-/*10. Demonstrate the difference between normal function and arrow function when used as object method (the `this `issue) */
+
+
+let obj = {
+  user: { address: { city: "New York" } },
+};
+
+console.log(obj.user.address.city)
