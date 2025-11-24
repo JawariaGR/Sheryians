@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+main button {
+  height: 75px;
+  width: 250px;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 400;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-shadow: 3px 3px;
+  background-color: #7f8de0;
+  position: relative;
+  z-index: 1;
+}
+button:active {
+  scale: 0.9;
+}
