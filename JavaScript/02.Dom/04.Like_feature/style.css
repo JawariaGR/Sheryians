@@ -16,43 +16,52 @@ body {
   background-color: black;
 }
 main {
-  height: 70%;
-  width: 30%;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: rgb(85, 87, 87);
-  border-radius: 10px;
   /* padding: 30px; */
+  position: relative;
 }
 div {
-  height: 300px;
-  width: 300px;
+  background-color: rgb(245, 248, 248);
+  width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   object-fit: cover;
+  padding: 50px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 5px 3px 10px black;
 }
 img {
-  position: relative;
   height: 300px;
-  width: 300px;
+  width: 100%;
   border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid black;
+  box-shadow: 5px 3px 10px black;
 }
 i {
   opacity: 0;
-  color: white;
-  font-size: 70px;
+  color: rgb(244, 91, 91);
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
   position: absolute;
-  transform: translate(0%,0%)  scale(0) rotate(0deg);
+  transform: translate(-50%, -50%) scale(0) rotate(-60deg);
+  transition: all ease 0.2s;
+  border: 2px 2px black;
 }
 
 h2 {
   margin-top: 20px;
-  color: white;
+  color: rgb(7, 7, 7);
   font-size: 25px;
   font-weight: 200px;
-  display: inline;
 }
