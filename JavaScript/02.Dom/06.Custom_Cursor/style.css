@@ -16,4 +16,6 @@ body {
 img {
   height: 30px;
   position: fixed;
+  top: -50px;
+  left: 50px;
 }
